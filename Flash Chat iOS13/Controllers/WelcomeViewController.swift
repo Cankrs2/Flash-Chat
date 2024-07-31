@@ -8,15 +8,35 @@
 
 import UIKit
 
+
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-       
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
     }
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        titleLabel.text = ""
+        
+        let title_text = K.appName
+        var char_index = 0.0
+        for letter in title_text{
+            Timer.scheduledTimer(withTimeInterval: 0.1*char_index, repeats: false) { timer in
+                self.titleLabel.text?.append(letter)
+            }
+            char_index += 1
+            
+        }
+    }
 }
+
+
