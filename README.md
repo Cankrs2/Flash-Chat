@@ -1,7 +1,8 @@
+
+
 A modern messaging app where users can sign up and log in to chat.
 
 📚
-Unicode: U+1F4DA, UTF-8: F0 9F 93 9A
 IOS Navigation Controller,Cocoapods and the Swift Package Manager
 Firebase Firestone as Cloud Database, Firebase Authentication
 IOS Table Views, Creating Custom UI with .xib files
